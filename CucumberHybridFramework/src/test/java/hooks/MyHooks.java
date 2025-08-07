@@ -24,14 +24,14 @@ public class MyHooks {
 		driver.get(prop.getProperty("url"));
 		
 	}
-	
+
 	@After
 	public void tearDown(Scenario scenario) {
-		
+		System.out.printlm("git try");
 		String scenarioName = scenario.getName().replaceAll(" ","_");
-		
+
 		if(scenario.isFailed()) {
-			
+
 			byte[] srcScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(srcScreenshot,"image/png", scenarioName);
 		}
