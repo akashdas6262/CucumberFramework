@@ -81,14 +81,12 @@ public class Login {
 	public void user_should_get_a_proper_warning_message_about_credentials_mismatch() {
 	  
 		Assert.assertTrue(loginPage.getWarningMessageText().contains("Warning: No match for E-Mail Address and/or Password."));
-		
 	}
 
 	@When("User dont enter email address into email field")
 	public void user_dont_enter_email_address_into_email_field() {
 		
 		loginPage.enterEmailAddress("");
-	    
 	}
 
 	@When("User dont enter password into password field")

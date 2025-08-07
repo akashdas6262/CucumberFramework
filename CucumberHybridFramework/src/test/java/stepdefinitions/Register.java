@@ -44,7 +44,6 @@ public class Register {
 		registerPage.enterTelephoneNumber(dataMap.get("telephone"));
 		registerPage.enterPassword(dataMap.get("password"));
 		registerPage.enterConfirmPassword(dataMap.get("password"));
-	
 	}
 	
 	@When("User enters the details into below fields with duplicate email")
